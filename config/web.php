@@ -2,6 +2,7 @@
 
 $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
+$urlManager = require(__DIR__ . '/url_manager.php');
 
 $config = [
     'id' => 'basic',
@@ -22,7 +23,9 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
-            // 'enableSession'=>false,
+            'enableSession' => false,
+            'loginUrl' => null,
+
         ],
 //        'errorHandler' => [
 //            'errorAction' => 'site/error',
@@ -44,17 +47,7 @@ $config = [
             ],
         ],
         'db' => $db,
-
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'enableStrictParsing' => true,
-            'showScriptName' => false,
-            'rules' => [
-                [
-                    'class' => 'yii\rest\UrlRule', 'controller' => 'product'
-                ]
-            ],
-        ],
+        'urlManager' => $urlManager,
     ],
     'params' => $params,
 ];

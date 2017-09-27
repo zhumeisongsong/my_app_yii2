@@ -10,15 +10,4 @@ class Product extends ActiveRecord
     {
         return 'product';
     }
-
-//    public function fields()
-//    {
-//        return [
-//            'id' => 'productId',
-//            'name' => 'productName',
-//            'price',
-//            'intro' => 'listIntro',
-//            'coverUrl'
-//        ];
-//    }
 }

@@ -6,16 +6,25 @@ return [
     'showScriptName' => false,
     'rules' => [
         [
-            'class' => 'yii\rest\UrlRule', 'controller' => 'product'
+            'class' => 'yii\rest\UrlRule',
+            'controller' => 'product',
+            'only' => [],
         ],
         [
-            'class' => 'yii\rest\UrlRule', 'controller' => 'user'
+            'class' => 'yii\rest\UrlRule',
+            'controller' => 'user',
+            'extraPatterns'=>[
+                'POST login'=>'login',
+                'GET signup-test' =>'signup-test',
+            ]
         ],
         [
-            'class' => 'yii\rest\UrlRule', 'controller' => 'order'
+            'class' => 'yii\rest\UrlRule',
+            'controller' => 'order'
         ],
         [
-            'class' => 'yii\rest\UrlRule', 'controller' => 'cart'
+            'class' => 'yii\rest\UrlRule',
+            'controller' => 'cart'
         ]
     ],
 ];
