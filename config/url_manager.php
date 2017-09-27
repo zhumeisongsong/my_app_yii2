@@ -12,7 +12,7 @@ return [
         ],
         [
             'class' => 'yii\rest\UrlRule',
-            'controller' => 'user',
+            'controller' => ['v1/user'],
             'extraPatterns'=>[
                 'POST login'=>'login',
                 'GET signup-test' =>'signup-test',
