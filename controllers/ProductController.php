@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use yii\rest\ActiveController;//index, view, create, update, delete, options
 use yii\data\ActiveDataProvider;
+
 use app\models\Product;
 
 class ProductController extends ActiveController
@@ -39,6 +40,5 @@ class ProductController extends ActiveController
         ]);
 
         return $products = $provider->getModels();
-
     }
 }
