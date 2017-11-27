@@ -29,9 +29,9 @@ class ProductController extends ActiveController
 
         $provider = new ActiveDataProvider([
             'query' => $query,
-            'pagination' => [
-                'pageSize' => $pageSize,
-            ],
+//            'pagination' => [
+//                'pageSize' => $pageSize,
+//            ],
             'sort' => [
                 'defaultOrder' => [
                     'productId' => SORT_DESC,
